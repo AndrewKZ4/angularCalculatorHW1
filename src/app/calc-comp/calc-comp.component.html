@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Calculator</h1>
+  <form class="row g-3">
+      <div class="col-md-2">
+      <input type="number" placeholder="A=" class="form-control" id="aParam" #aParam>
+    </div>
+    <div class="col-md-2">
+      <select id="inputState" class="form-select" #operator>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>mod</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <input type="number" placeholder="B=" class="form-control" id="bParam" #bParam>
+    </div>
+    <div class="col-md-1">
+      <button type="button" class="btn btn-secondary"  (click)=calculate(aParam.value,bParam.value,operator.value)>=</button>
+    </div>
+    <div class="col-md-2">
+      <input type="text" placeholder="Result" value="{{result}}" class="form-control" id="result" readonly>
+    </div>
+  </form>
+  </div>
